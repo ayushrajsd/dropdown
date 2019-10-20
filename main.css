@@ -1,0 +1,93 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body{
+    background: #f4f4f4;
+
+}
+
+#navbar ul{
+    list-style: none;
+}
+
+#navbar ul li{
+    display: inline-block;
+    color: #333;
+    padding: 1rem;
+    position: relative;
+}
+
+#navbar ul li a{
+    color:#333;
+    text-decoration: none;
+}
+
+/* Hide nested list items */
+#navbar ul li ul {
+    display: none;
+}
+
+#navbar ul li:hover{
+    background: coral;
+    color:#fff;
+    cursor: pointer;
+}
+
+#navbar ul li:hover ul{
+    display: block;
+    position: absolute;
+    width: 200px;
+    top: 35px;
+    left:0px;
+    margin-top: 1rem;
+
+}
+
+#navbar ul li:hover ul li{
+    display: block;
+    background: #e7e7e7;
+}
+
+#navbar ul li:hover ul li:hover{
+    background: #e0e0e0;
+    color:inherit;
+}
+
+#navbar ul li:hover ul li span{
+    float: right;
+    background: coral;
+    padding: 0.2rem 0.5rem;
+    color: #fff;
+    border-radius: 5px;
+}
+
+#navbar ul li:hover ul li:hover span{
+    background: chocolate;
+}
+
+#showcase{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height:300px;
+    background: coral;
+    color:#e6e6e6;
+}
+
+@media(max-width: 600px){
+    #navbar ul li {
+        display: block;
+    }
+
+    #navbar ul li:hover ul{
+        position: relative;
+        width: 100%;
+        top:0;
+    }
+}
